@@ -1,0 +1,130 @@
+/* Center the form in the page */
+.otp-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2rem;
+  background: #ffffff0d;
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1s ease-in;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.otp-heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #00d4ff;
+  text-shadow: 1px 1px 4px #00000060;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 18px;
+}
+
+/* Labels */
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+/* Inputs */
+.otp-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  background: #0e0e0e;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff88;
+}
+
+/* Buttons */
+.otp-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(145deg, #00d4ff, #0084ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.otp-button:hover {
+  background: linear-gradient(145deg, #0084ff, #00d4ff);
+  box-shadow: 0 0 15px #00d4ff88;
+  transform: translateY(-2px);
+}
+
+/* Message */
+.otp-message {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ffcb6b;
+  text-align: center;
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Optional: background for body */
+body {
+  background: linear-gradient(135deg, #000000, #1c1c1c);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.otp-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.otp-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.otp-button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
